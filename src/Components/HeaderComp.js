@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class HeaderComp extends Component {
-  render() {
-    return (
-        <header className="d-flex justify-between align-center p-40">
+
+function HeaderComp (props){
+  return(
+    <header className="d-flex justify-between align-center p-40">
         <div className="d-flex align-center">
           <img width={40} height={40} src="/img/logo.png" />
           <div>
@@ -14,7 +14,7 @@ export default class HeaderComp extends Component {
 
         <div>
           <ul className="d-flex">
-            <li className="mr-30">
+            <li onClick={props.onClickCart} className="mr-30 cu-p">
               <img width={18} height={12} src="/img/cart.svg" />
               <span>1049.00$</span>
             </li>
@@ -25,6 +25,7 @@ export default class HeaderComp extends Component {
           </ul>
         </div>
     </header>
-    )
-  }
+  )
 }
+
+export default HeaderComp;
