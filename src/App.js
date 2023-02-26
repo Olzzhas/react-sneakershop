@@ -26,10 +26,6 @@ function App() {
           axios.get('https://62c811690f32635590d09782.mockapi.io/items')
         ]);
           
-        // const cartResponse = await axios.get('https://62c811690f32635590d09782.mockapi.io/cart')
-        // const favoritesResponse = await axios.get('https://62c811690f32635590d09782.mockapi.io/favorites')
-        // const itemsResponse = await axios.get('https://62c811690f32635590d09782.mockapi.io/items')
-
         setIsLoading(false);
         setCartItems(cartResponse.data);
         setFavorites(favoritesResponse.data);
@@ -106,8 +102,6 @@ function App() {
       onAddToFavorite, 
       setIsOpened, 
       setCartItems, 
-      cartItems, 
-      onAddToFavorite, 
       onAddToCart, 
       isLoading
     }}>
@@ -152,3 +146,4 @@ function App() {
 }
 
 export default App;
+
